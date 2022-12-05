@@ -151,11 +151,7 @@
     <ResourceCompile Include="BT02.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BaiBao.cpp" />
-    <ClCompile Include="CongTrinhKhoaHoc.cpp" />
-    <ClCompile Include="ListCTKH.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Sach.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

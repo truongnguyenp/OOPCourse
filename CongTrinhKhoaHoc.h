@@ -17,8 +17,8 @@ public:
     virtual void input();
     virtual void output();
     T getID();
-    T getYoB();
-    T getAoB();
+    int getYoB();
+    bool getAoB();
     void setID(T);
     void setYoB(int);
     void setAoB(bool);
@@ -56,9 +56,10 @@ void CongTrinhKhoaHoc<T>::setYoB(int year)
 template <typename T>
 void CongTrinhKhoaHoc<T>::output()
 {
-    cout << "ID: " << this->ID;
-    cout << "Year of Published: " << this->yoB;
-    cout << "Area of published: " << (this->aoB ? "In country" : "Abroad");
+
+    cout << "ID: " << this->ID << "\n";
+    cout << "Year of Published: " << this->yoB<<"\n";
+    cout << "Area of published: " << (this->aoB ? "In country" : "Abroad") << "\n";
 }
 template <typename T>
 void CongTrinhKhoaHoc<T>::input()
@@ -67,12 +68,24 @@ void CongTrinhKhoaHoc<T>::input()
     cin >> this->ID;
     cout << "Year of Published: ";
     cin >> this->yoB;
-    cout << "Area of published: 1.In country : 2.Abroad";
+    cout << "Area of published: 1.In country : 2.Abroad\n";
     int choice;
     cin >> (choice);
     if (choice == 1)
         this->setAoB(true);
     else if (choice == 2)
         this->setAoB(false);
+}
+template <typename T>
+T CongTrinhKhoaHoc<T>::getID() {
+    return this->getID;
+}
+template <typename T>
+int CongTrinhKhoaHoc<T>::getYoB() {
+    return this->yoB;
+}
+template <typename T>
+bool CongTrinhKhoaHoc<T>::getAoB() {
+    return this->aoB;
 }
 #endif

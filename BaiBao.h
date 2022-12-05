@@ -36,7 +36,7 @@ template <class T>
 void BaiBao<T>::input()
 {
     CongTrinhKhoaHoc<T>::input();
-    cout << "Type of Book: ";
+    cout << "Type of Paper: ";
     cin >> this->name;
     cout << "Number of Author: ";
     cin >> this->noA;
@@ -44,6 +44,8 @@ void BaiBao<T>::input()
 template <class T>
 void BaiBao<T>::output()
 {
+    cout << "ok";
+
     CongTrinhKhoaHoc<T>::output();
     cout << "Type of Book: ";
     cout << this->name;

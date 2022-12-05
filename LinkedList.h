@@ -1,11 +1,6 @@
 /*
     LinkedList.h - V1.1 - Generic LinkedList implementation
-    Works better with FIFO, because LIFO will need to
-    search the entire List to find the last one;
-
-    For instructions, go to https://github.com/ivanseidel/LinkedList
-
-    Created by Ivan Seidel Gomes, March, 2013.
+    Referenced from Ivan Seidel Gomes, March, 2013.
     Released into the public domain.
 */
 

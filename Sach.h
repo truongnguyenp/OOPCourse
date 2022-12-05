@@ -36,6 +36,7 @@ Sach<T>::~Sach(){
 template <class T>
 void Sach<T>::input()
 {
+
     CongTrinhKhoaHoc<T>::input();
     cout << "Type of Book: ";
     cin >> this->type;
@@ -45,6 +46,7 @@ void Sach<T>::input()
 template <class T>
 void Sach<T>::output()
 {
+
     CongTrinhKhoaHoc<T>::output();
     cout << "Type of Book: ";
     cout << this->type;
