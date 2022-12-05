@@ -56,26 +56,34 @@ void ListCTKH<T>::addCTKH()
     int type;
     CongTrinhKhoaHoc<T>* CTKH;
     cout << "Type of scientific research:\n 1.Book \n 2.Paper";
-    cin >> type;
-    switch (type)
-    {
-    case 1:
-    {
-        CTKH = new Sach<T>;
-        (*CTKH).input();
-        (this->CTKHs).add(*CTKH);
-        break;
+    try {
+        cin >> type;
+        switch (type)
+        {
+        case 1:
+        {
+            CTKH = new Sach<T>;
+            (*CTKH).input();
+            (this->CTKHs).add(*CTKH);
+            break;
+        }
+        case 2:
+        {
+            CTKH = new BaiBao<T>;
+            (*CTKH).input();
+            (this->CTKHs).add(*CTKH);
+            break;
+        }
+        default:
+            cout << "choice does not exist";
+            break;
+        }
+        
     }
-    case 2:
-    {
-        CTKH = new BaiBao<T>;
-        (*CTKH).input();
-        (this->CTKHs).add(*CTKH);
-        break;
-    }
-    default:
-        cout << "choice does not exist";
-        break;
+    catch (...) {
+        cout << "Invalid choice\n";
+        this->addCTKH();
+        
     }
 }
 template <typename T>
@@ -84,25 +92,30 @@ void ListCTKH<T>::addCTKH(int k, CongTrinhKhoaHoc<T>)
     CongTrinhKhoaHoc<T> CTKH;
     int type;
     cout << "Type of scientific research:\n 1.Book \n2.Paper\n";
-    cin >> type;
-    switch (type)
-    {
-    case 1:
-    {
-        CTKH = new Sach<T>;
-        break;
+    try {
+        cin >> type;
+        switch (type)
+        {
+        case 1:
+        {
+            CTKH = new Sach<T>;
+            break;
+        }
+        case 2:
+        {
+            CTKH = new BaiBao<T>;
+            break;
+        }
+        default:
+            cout << "choice does not exist";
+            break;
+        }
+        CTKH.input();
+        this->add(CTKH);
     }
-    case 2:
-    {
-        CTKH = new BaiBao<T>;
-        break;
+    catch (...) {
+        cout<<"Invalid choice\n";
     }
-    default:
-        cout << "choice does not exist";
-        break;
-    }
-    CTKH.input();
-    (this->CTKHs).add(k, CTKH);
 }
 template <typename T>
 void ListCTKH<T>::removeCTKH()
